@@ -1,2 +1,2 @@
-# prestashop1.7-custom-payment
+# SamplePay - Sample Custom Payment Method for Prestashop 1.7.x
 Sample payment module for Prestashop 1.7.x

@@ -48,7 +48,9 @@ class PrestaPay extends PaymentModule
      */
     public function install()
     {
-        return parent::install();
+        return parent::install()
+            && $this->registerHook('paymentOptions')
+            && $this->registerHook('paymentReturn');
     }
 
     /**

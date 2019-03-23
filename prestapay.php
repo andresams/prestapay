@@ -122,4 +122,22 @@ class PrestaPay extends PaymentModule
 
         return $payment_options;
     }
+
+    /**
+     * Display a message in the paymentReturn hook
+     * 
+     * @param array $params
+     * @return string
+     */
+    public function hookPaymentReturn($params)
+    {
+        /**
+         * Verify if this module is enabled
+         */
+        if (!$this->active) {
+            return;
+        }
+
+        return $this->fetch('module:prestapay/views/templates/hook/payment_return.tpl');
+    }
 }
